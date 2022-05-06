@@ -1,0 +1,2 @@
+class Lookatme < ApplicationRecord
+end
