@@ -10,10 +10,11 @@
 img { max-width: 100%; }
 
 body {
+	margin: 0;
 	width: 100%;
   height: 100%;
 	background-color: black;
-	font-size: 100%;
+	font-size: 1vw;
 	overflow-x: hidden;
 	font-family: 'Poppins', sans-serif;
   color: white;
@@ -24,30 +25,122 @@ body {
   display: inline-block;
 }
 
-// Estilos
-
-.introducao {
-  margin-top: 10%;
+.btn {
+	font-size: 1.5em;
+	font-weight: 900;
+	background-color: #fdb55c;
+	color: black;
+	width: 100%;
 }
 
-.cotation {
-  padding-top: 5%;
+.btn2 {
+	font-size: 2em;
+	background-color: #fdb55c;
+	color: black;
+	font-weight: 400;
+	width: 50%;
+}
+
+// Timer
+
+#countdown {
+  width: 100%;
+	padding-top: 2%;
+}
+
+#countdown-2 {
+  width: 100%;
+	padding-top: 2%;
+}
+
+label {
+  clear: both;
+  display: block;
+}
+
+.contador {
+	margin-top: 5%;
+	margin-bottom: 8%;
+}
+
+#countdown span {
+  background: rgba(0,0,0,0);
+  color: #000;
+  font-size: 26px;
+  font-weight: normal;
   text-align: center;
+  width: 25%;
+  dispaly: block;
+  float: left;
+  color: white;
+  font-size: 1em;
+  font-weight: 800;
+}
+
+#countdown-2 span {
+  background: rgba(0,0,0,0);
+  color: #000;
+  font-size: 26px;
+  font-weight: normal;
+  text-align: center;
+  width: 25%;
+  dispaly: block;
+  float: left;
+  color: white;
+  font-size: 1em;
+  font-weight: 800;
+}
+
+// Textos
+
+.introducao h1 {
+	font-weight: 800;
+	font-size: 4em;
+}
+
+.introducao h2 {
+	font-weight: 800;
+	font-size: 2.5em;
+}
+
+.introducao h3 {
+	font-weight: 800;
+	font-size: 2em;
+}
+
+.introducao h4 {
+	font-weight: 800;
+	font-size: 1.5em;
+}
+
+.introducao p {
+	font-weight: 400;
+	font-size: 1.2em;
+}
+
+.oportunidades {
+	font-size: 3em;
+	text-align: center;
+	color: #fdb55c;
+}
+
+.segunda-dobra-quadro {
+	color: black;
+}
+
+.cotation h1 {
+  text-align: center;
+	color: #FF8C00;
+	font-size: 3em;
 }
 
 .linha-horizontal {
-  margin-top: 5%;
+  margin-top: 2%;
+	margin-bottom: 2%;
   width: 100%;
-  border: 1px solid white;
-  border-color: white;
+  border: 1px solid black;
+  border-color: #fdb55c;
 }
-
-.linha-vertical {
-  height: 50px;
-  border-left: 1px solid white;
-  transform: translate(50%, 0%);
-}
-
 
 // Backgrounds
 
@@ -67,43 +160,35 @@ body {
 
 .terceira-dobra-foto {
   width: 100vw;
-  height: 56vw;
-  background-image: url(<%= asset_path 'fundo-1'  %>);
+  height: 68vw;
+  background-image: url(<%= asset_path 'fundo-3'  %>);
   background-size: cover;
 }
 
 .quarta-dobra-foto {
   width: 100vw;
-  height: 56vw;
-  background-image: url(<%= asset_path 'fundo-2'  %>);
+  height: 100vw;
+  background-image: url(<%= asset_path 'fundo-5'  %>);
   background-size: cover;
 }
 
 .quinta-dobra-foto {
   width: 100vw;
-  height: 56vw;
-  background-image: url(<%= asset_path 'fundo-1'  %>);
-  background-size: cover;
+  height: 80vw;
+  background-color: black;
 }
 
 .sexta-dobra-foto {
   width: 100vw;
-  height: 56vw;
-  background-image: url(<%= asset_path 'fundo-2'  %>);
+  height: 25vw;
+  background-image: url(<%= asset_path 'selo_qualidade'  %>);
   background-size: cover;
 }
 
 .setima-dobra-foto {
   width: 100vw;
   height: 56vw;
-  background-image: url(<%= asset_path 'fundo-1'  %>);
-  background-size: cover;
-}
-
-.oitava-dobra-foto {
-  width: 100vw;
-  height: 56vw;
-  background-image: url(<%= asset_path 'fundo-2'  %>);
+  background-image: url(<%= asset_path 'fundo-ultima'  %>);
   background-size: cover;
 }
 
@@ -113,81 +198,143 @@ body {
   position: absolute;
   padding: 2%;
   width: 40%;
-  top: 33%;
-  left: 10%;
-  box-shadow: 0 0 5px #aaa inset;
-  border-radius: 10px;
+  top: 32%;
+  left: 9.5%;
+  //box-shadow: 0 0 5px #aaa inset;
+  //border-radius: 10px;
 }
 
 .segunda-dobra-quadro {
   position: absolute;
   padding: 2%;
-  width: 30%;
-  top: 23%;
-  left: 60%;
+  width: 40%;
+  top: 10%;
+  left: 50%;
 }
 
 .terceira-dobra-quadro {
   position: absolute;
-  padding: 2%;
-  width: 90%;
-  top: 30%;
-  left: 5%;
+  width: 100%;
+  top: 5%;
 }
 
 .quarta-dobra-quadro {
   position: absolute;
   padding: 2%;
-  width: 90%;
-  top: 30%;
-  left: 5%;
+  width: 100%;
+  top: 1%;
 }
 
 .quinta-dobra-quadro {
-  position: absolute;
-  width: 50%;
-  top: 20%;
-  transform: translate(50%, 0%);
+	position: absolute;
+  width: 100vw;
+  top: 10%;
+	border-style: solid;
+	border-color: black;
+  //transform: translate(80%, 0%);
 }
 
 .sexta-dobra-quadro {
   position: absolute;
-  padding: 2%;
-  width: 90%;
-  top: 20%;
-  left: 5%;
+  padding: 1%;
+  width: 50%;
+  top: 15%;
+  left: 42%;
 }
 
 .setima-dobra-quadro {
   position: absolute;
-  width: 50%;
-  top: 20%;
-  transform: translate(50%, 0%);
-}
-
-.oitava-dobra-quadro {
-  position: absolute;
-  width: 50%;
-  top: 50%;
-  transform: translate(50%, 0%);
+  padding: 2%;
+  width: 40%;
+  top: 12%;
+  left: 9.5%;
+  //box-shadow: 0 0 5px #aaa inset;
+  //border-radius: 10px;
 }
 
 // Elementos flexíveis
 
-.row-1x4 {
-  padding-top: 5%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-between;
+.flex-container-3 {
+	display: flex;
+	min-height: 100%;
+  flex-direction: column; /* added */
+	align-items: center;
 }
 
-.row-1x2 {
-  padding-top: 5%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-evenly;
+.flex-container-3-row {
+	display: flex;
+ 	flex: 1; /* added */
+}
+
+.flex-container-3-item {
+	flex: 1; /* added */
+}
+
+.rentabilidade {
+	padding: 2%;
+	text-align: center;
+	font-size: 1.5em;
+	color: white;
+}
+
+.action_btn {
+	margin-top: 2%;
+	text-align: center;
+}
+
+.row-nx1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.row-1x4-frame {
+}
+
+.row-nx1-frame {
+	display: flex;
+	justify-content: center;
+}
+
+.modulo {
+	margin-top: 1%;
+	width: 70%;
+	display: flex;
+	font-size: 1em;
+	color: black;
+	background-color: white;
+}
+
+.modulo2 {
+	margin-top: 1%;
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	font-size: 1em;
+	color: black;
+	background-color: white;
+}
+
+.bonus {
+	font-size: 3em;
+	color: #fdb55c;
+	font-weight: 900;
+}
+
+.numero {
+	padding: 5px;
+	font-size: 3em;
+	color: #FF8C00;
+}
+
+.title {
+	font-size: 1.2em;
+	color: #fdb55c;
+	font-weight:900;
+}
+
+.explicacao {
+	font-size: 1em;
 }
 
 .col-4x1 {
@@ -198,51 +345,78 @@ body {
   justify-content: space-between;
 }
 
-.row-1x4-frame {
-  border-style: solid;
-  border-width: 5px;
-  border-color: red;
+.seguro {
+	display: flex;
+	padding-left: 5%;
+	flex-direction: column;
+	background-color: white;
 }
 
-.row-1x2-frame {
-  border-style: solid;
-  border-width: 5px;
-  border-color: red;
+.prazo {
+	font-size: 4em;
+	font-weight: 900;
+	color: #fdb55c;
+}
+
+.garantia {
+	padding: 1.5%;
+	font-size: 1.5em;
+  color: black;
 }
 
 .col-4x1-frame {
   margin: 2%;
   border-style: solid;
   border-width: 5px;
-  border-color: red;
 }
 
-// Timer
-
-#countdown {
-  width: 100%;
+.inscricao {
+	font-weight: 900;
 }
 
-label {
-  clear: both;
-  display: block;
+.risco {
+	text-decoration: line-through;
 }
 
-#countdown span {
-  background: rgba(0,0,0,0);
-  color: #000;
-  font-size: 26px;
-  font-weight: normal;
-  text-align: center;
-  width: 25%;
-  dispaly: block;
-  float: left;
-  border-right: 1px solid #FFF;
-  color: white;
-  font-size: 1em;
-  font-weight: 800;
+.preco {
+	font-size: 1em;
+	padding-top: 5%;
+	color: #fdb55c;
+	font-weight: 900;
+	text-align: center;
 }
 
-#countdown span:last-child {
-  border-right: 1px solid #313233;
+.aviso {
+	font-size: 1.2em;
+	padding-top: 5%;
+	color: white;
+	font-weight: 300;
+}
+
+
+// Grid 2x2
+
+.grid2x2 {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+	margin-left: 5%;
+}
+.grid2x2 > div {
+  display: flex;
+  flex-basis: calc(50% - 50px);
+  justify-content: center;
+  flex-direction: column;
+}
+.grid2x2 > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box {
+	margin: 10px;
+	width: 30%;
+	height: 30%;
 }
